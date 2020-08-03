@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- #1 VENDING MACHINE -->
+    <main class="main">
+      <section class="one">
+        <div class="total">Total: $0</div>
+        <button class="food" id="lime-cola" data-price="2">
+          <div>LIME COLA</div>
+          <div>$2.00</div>
+        </button>
+        <button class="food" id="salted-peanuts" data-price="3">
+          <div>SALTED PEANUTS</div>
+          <div>$3.00</div>
+        </button>
+        <button class="food" id="chocolate-bar" data-price="4">
+          <div>CHOCOLATE BAR</div>
+          <div>$4.00</div>
+        </button>
+        <button class="food" id="fruit-gummies" data-price="6">
+          <div>FRUIT GUMMIES</div>
+          <div>$6.00</div>
+        </button>
+      </section>
+      <!-- #2 MAKE MONEY -->
+      <section class="two">
+        <form class="make-money">
+          <label for="amount">How many?</label>
+          <input type="number" id="amount" name="amount" />
+          <label for="coin">Which coin?</label>
+          <select id="coin-select" name="coin-select">
+            <option value="Penny">Penny</option>
+            <option value="Nickel">Nickel</option>
+            <option value="Dime">Dime</option>
+            <option value="Quarter">Quarter</option>
+          </select>
+          <button class="submit-btn">Make Money!</button>
+        </form>
+        <div class="coin-container"></div>
+      </section>
+      <!-- #3 LIGHT BULB -->
+      <section class="three">
+        <div class="light-bulb">Light Bulb</div>
+        <button class="on">On</button>
+        <button class="off">Off</button>
+        <button class="toggle">Toggle</button>
+        <button class="end">end</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.make-money {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+  background-color: rgb(177, 177, 177);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.coin-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coin-container {
+  margin: 10px;
+}
+
+.light-bulb {
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.turn-on {
+  padding: 20px;
+  background-color: yellow;
+  color: black;
+}
