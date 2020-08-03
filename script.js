@@ -18,22 +18,30 @@ foodButtons.forEach((button) => {
 let makeMoneyForm = document.querySelector(".make-money");
 let coinContainerDiv = document.querySelector(".coin-container");
 
+//Helper function to make coins
+const makeACoin = (coinType) => {
+  let newCoin = document.createElement("div");
+  newCoin.setAttribute("class", "coin");
+  newCoin.addEventListener("click", () => {
+    newCoin.remove();
+  });
+
+  let coinLabel = document.createElement("div");
+  coinLabel.setAttribute("class", "coin-label");
+  coinLabel.innerText = coinType;
+
+  newCoin.append(coinLabel);
+  coinContainerDiv.append(newCoin);
+};
+
+//Event listener for the form
 makeMoneyForm.addEventListener("submit", (event) => {
   event.preventDefault();
   let data = new FormData(makeMoneyForm);
   let coinAmount = parseInt(data.get("amount"));
   let coinType = data.get("coin-select");
   for (let i = 1; i <= coinAmount; i++) {
-    let newCoin = document.createElement("div");
-    let coinLabel = document.createElement("div");
-    newCoin.setAttribute("class", "coin");
-    coinLabel.setAttribute("class", "coin-label");
-    coinLabel.innerText = coinType;
-    newCoin.addEventListener("click", () => {
-      newCoin.remove();
-    });
-    newCoin.append(coinLabel);
-    coinContainerDiv.append(newCoin);
+    makeACoin(coinType);
   }
 });
 
